@@ -1,11 +1,3 @@
-import streamlit as st
-from tensorflow.keras.models import load_model
-from PIL import Image, ImageOps
-import numpy as np
-import json
-import os
-from datetime import datetime
-
 st.set_page_config(page_title="KI Fundbüro", layout="centered")
 
 # Modell laden
