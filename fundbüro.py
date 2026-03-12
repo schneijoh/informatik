@@ -1,3 +1,10 @@
+import streamlit as st
+import numpy as np
+import json
+import os
+from keras.models import load_model
+from PIL import Image
+
 st.set_page_config(page_title="KI Fundbüro", layout="centered")
 
 # Modell laden
@@ -17,8 +24,8 @@ if not os.path.exists(FUNDE_DATEI):
     with open(FUNDE_DATEI, "w") as f:
         json.dump([], f)
 
-
 def predict_image(image):
+    
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
     size = (224, 224)
